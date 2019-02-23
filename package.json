@@ -1,0 +1,67 @@
+{
+    "name": "docx-wasm-www",
+    "version": "0.0.1",
+    "description": "Microsoft Word doc/docx to PDF conversion, client-side in-browser",
+    "repository": "https://github.com/NativeDocuments/docx-wasm-www",
+    "license": "MIT",
+    "keywords": [
+        "docx",
+        "doc",
+        "openxml",
+        "Word document",
+        "Microsoft Word",
+        "pdf",
+        "convert",
+        "Word to PDF",
+        "client-side",
+        "in-browser",
+        "Chrome",
+        "Firefox",
+        "Android"
+    ],
+    "author": {
+        "name": "Native Documents",
+        "email": "contact@nativedocuments.com"
+    },
+    "homepage": "http://nativedocuments.com",
+    "devDependencies": {
+        "@types/react": "^16.7.13",
+        "@types/react-dom": "^16.0.11",
+        "@types/node": "^10.12.10",
+        "@babel/core": "^7.0.0",
+        "@babel/preset-env": "^7.0.0",
+        "@babel/preset-react": "^7.0.0",
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.3",
+        "babel-loader": "^8.0.4",
+        "css-loader": "^1.0.0",
+        "source-map-loader": "^0.2.3",
+        "style-loader": "^0.22.1",
+        "awesome-typescript-loader": "^5.2.1",
+        "url-loader": "^1.1.2",
+        "typescript": "^3.1.2",
+        "webpack": "4.20.2",
+        "webpack-cli": "3.1.1",
+        "webpack-dev-server": "3.1.9",
+        "webpack-merge": "4.1.4",
+        "uglifyjs-webpack-plugin": "^2.0.1",
+        "copy-webpack-plugin": "^4.6.0",
+        "string-replace-loader": "^2.1.1",
+        "nd-client-nodejs": "https://s3-us-west-2.amazonaws.com/nd-codebuild/nd-core/nd-core/nd-client-nodejs-0.0.1.tgz"
+    },
+    "dependencies": {
+        "@babel/polyfill": "^7.0.0",
+        "@nativedocuments/docx-wasm": "https://s3-us-west-2.amazonaws.com/nd-codebuild/nd-core/nd-core/nd-npm-docx-wasm-5C63EB38.tgz",
+        "@nativedocuments/fontpool": "https://s3-us-west-2.amazonaws.com/nd-codebuild/nd-core/nd-core/nd-npm-fontpool-vCD3C1C742B5912F8ED9685F78ACDC0B4.tgz"
+    },
+    "scripts": {
+        "start": "node webpack/webpack.help.js",
+        "dev-server": "./node_modules/.bin/webpack-dev-server --config webpack/webpack.development.js --no-inline --watch",
+        "build": "./node_modules/.bin/webpack --config webpack/webpack.production.js"
+    },
+    "browserslist": [
+        "last 2 versions",
+        "not ie 11",
+        "not op_mini all"
+    ]
+}
